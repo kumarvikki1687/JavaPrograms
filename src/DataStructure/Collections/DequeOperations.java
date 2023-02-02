@@ -1,23 +1,23 @@
-package DataStructure.Deque;
+package DataStructure.Collections;
 
 import java.util.Deque;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class DequeOperation {
+public class DequeOperations {
     /*
-    .addFirst()     add at head/start
-    .addLast()      add at tail/end
-    .getFirst()     retrieve head but not delete
-    .getLast()      retrieve tail but not delete
-    .removeFirst()  retrieve & delete head
-    .removeLast()   retrieve & delete tail
-    .remove()       remove by element and return flag as true
+    .addFirst()         add at head/start
+    .addLast()          add at tail/end
+    .getFirst()         retrieve head but not delete
+    .getLast()          retrieve tail but not delete
+    .removeFirst()      retrieve & delete head
+    .removeLast()       retrieve & delete tail
+    .remove()           remove by element and return flag as true
      */
     Deque<Integer> dq = new LinkedList<>();
 
     void displayDeque() {
-        Iterator<Integer> it = dq.iterator();
+        Iterator it = dq.iterator();
         while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
@@ -25,7 +25,7 @@ public class DequeOperation {
     }
 
     public static void main(String[] args) {
-        DequeOperation ob = new DequeOperation();
+        DequeOperations ob = new DequeOperations();
 
         ob.dq.addFirst(10);
         ob.dq.addLast(20);
