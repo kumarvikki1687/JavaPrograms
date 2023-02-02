@@ -1,4 +1,4 @@
-package Deque;
+package DataStructure.Deque;
 
 import java.util.Deque;
 import java.util.Iterator;

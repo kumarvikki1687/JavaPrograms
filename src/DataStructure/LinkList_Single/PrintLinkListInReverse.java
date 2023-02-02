@@ -1,4 +1,4 @@
-package LinkList_Single;
+package DataStructure.LinkList_Single;
 
 class Node {
     int data;

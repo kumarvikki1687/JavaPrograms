@@ -1,4 +1,4 @@
-package LinkList_Single;
+package DataStructure.LinkList_Single;
 
 public class ReverseLinkList {
     Node root;
