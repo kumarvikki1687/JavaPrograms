@@ -1,4 +1,4 @@
-package DataStructure.Collections;
+package DataStructure.Collections.Deque;
 
 import java.util.Deque;
 import java.util.Iterator;
@@ -6,13 +6,16 @@ import java.util.LinkedList;
 
 public class DequeOperations {
     /*
-    .addFirst()         add at head/start
-    .addLast()          add at tail/end
-    .getFirst()         retrieve head but not delete
-    .getLast()          retrieve tail but not delete
-    .removeFirst()      retrieve & delete head
-    .removeLast()       retrieve & delete tail
-    .remove()           remove by element and return flag as true
+    uses linkedList to implement interface Deque
+
+    .addFirst()         O(1)        add at head/start
+    .addLast()          O(n)        add at tail/end
+    .getFirst()         O(1)        retrieve head but not delete
+    .getLast()          O(n)        retrieve tail but not delete
+    .contains()         O(n)        check if element present in list
+    .removeFirst()      O(1)        retrieve & delete head
+    .removeLast()       O(n)        retrieve & delete tail
+    .remove()           O(n)        remove by index and don't return anything
      */
     Deque<Integer> dq = new LinkedList<>();
 
@@ -20,6 +23,13 @@ public class DequeOperations {
         Iterator it = dq.iterator();
         while (it.hasNext()) {
             System.out.print(it.next() + " ");
+        }
+        System.out.println();
+    }
+
+    private void displayUsingAuto() {           // iterating using for auto loop
+        for(Integer it : dq) {
+            System.out.print(it + " ");
         }
         System.out.println();
     }
@@ -41,5 +51,6 @@ public class DequeOperations {
         ob.displayDeque();
         System.out.println(ob.dq.remove(20));
         ob.displayDeque();
+        ob.displayUsingAuto();
     }
 }
