@@ -1,17 +1,21 @@
-package DataStructure.LinkList_Single;
+package DataStructure.LinkedList_Double;
 
 class Node {
     int data;
     Node next;
+    Node prev;
 
     Node(int data) {
         this.data = data;
         this.next = null;
+        this.prev = null;
     }
 }
+
 public class PrintLinkListInReverse {
     Node root;
-    private void addNode(int data) {    // add node at starting
+
+    private void addNode(int data) {        // add new node at starting
         Node tmp = new Node(data);
         if (root==null) {
             root = tmp;
@@ -21,20 +25,20 @@ public class PrintLinkListInReverse {
         }
     }
 
-    private void printLinkList() {      // print listList
+    private void printLinkList() {      // print linkList
         Node tmp = root;
-        while(tmp!=null) {
+        while (tmp!=null) {
             System.out.print(tmp.data + " ");
             tmp = tmp.next;
         }
         System.out.println();
     }
 
-    private void printLinkListInReverse(Node root) {        // print listList in reverse
+    private void printListInReverse(Node root) {    // print linkList in reverse
         if(root==null) {
             return;
         }
-        printLinkListInReverse(root.next);
+        printListInReverse(root.next);
         System.out.print(root.data + " ");
     }
 
@@ -45,7 +49,7 @@ public class PrintLinkListInReverse {
         ob.addNode(30);
 
         ob.printLinkList();
-        ob.printLinkListInReverse(ob.root);
+        ob.printListInReverse(ob.root);
         System.out.println();
         ob.printLinkList();
     }

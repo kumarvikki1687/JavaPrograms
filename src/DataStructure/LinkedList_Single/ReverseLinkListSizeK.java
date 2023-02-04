@@ -1,4 +1,4 @@
-package DataStructure.LinkList_Double;
+package DataStructure.LinkedList_Single;
 
 public class ReverseLinkListSizeK {
     Node root;
@@ -14,34 +14,34 @@ public class ReverseLinkListSizeK {
         }
     }
 
-    private void printLinkList() {      // print linkList
+    private void printLinkList() {          // print listList
         Node tmp = root;
-        while (tmp!=null) {
+        while(tmp!=null) {
             System.out.print(tmp.data + " ");
             tmp = tmp.next;
         }
         System.out.println();
     }
 
-    private Node reverseListSizeK(Node root) {        // reverse linkList in size K
+    private Node reverseInSizeK(Node root) {    // reverse listList in size K
         Node curr = root;
         Node prev = null;
         Node next = null;
 
-        int count=0;
-        while(curr!=null && count<size) {
+        int count = 0;
+        while (curr!=null && count<size) {
             next = curr.next;
             curr.next = prev;
-            curr.prev = next;
             prev = curr;
             curr = next;
             count++;
         }
-        if(curr!=null) {
-            root.next = reverseListSizeK(curr);
+        if (curr!=null) {
+            root.next = reverseInSizeK(curr);
         }
         return prev;
     }
+
     public static void main(String[] args) {
         ReverseLinkListSizeK ob = new ReverseLinkListSizeK();
         ob.addNode(1);
@@ -56,7 +56,7 @@ public class ReverseLinkListSizeK {
         ob.addNode(10);
 
         ob.printLinkList();
-        ob.root = ob.reverseListSizeK(ob.root);
+        ob.root = ob.reverseInSizeK(ob.root);
         ob.printLinkList();
     }
 }

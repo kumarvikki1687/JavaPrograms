@@ -7,7 +7,7 @@ public class LinkedHashMapOperations {
     /*
     LinkedList to storage, order guaranteed
 
-    .put(key,value)         O(n)        add element to hashset
+    .put(key,value)         O(1)        add element to hashset
     .get(key)               O(1)        get value WRT key
     .remove(key)            O(n)        remove by element and return it
     .containsKey()          O(1)        check if key present or not

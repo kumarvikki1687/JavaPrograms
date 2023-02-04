@@ -1,9 +1,9 @@
-package DataStructure.LinkList_Double;
+package DataStructure.LinkedList_Single;
 
 public class ReverseLinkList {
     Node root;
 
-    private void addNode(int data) {        // add new node at starting
+    private void addNode(int data) {       // add new node at starting
         Node tmp = new Node(data);
         if(root==null) {
             root = tmp;
@@ -13,16 +13,7 @@ public class ReverseLinkList {
         }
     }
 
-    private void printLinkList() {      // print linkList
-        Node tmp = root;
-        while (tmp!=null) {
-            System.out.print(tmp.data + " ");
-            tmp = tmp.next;
-        }
-        System.out.println();
-    }
-
-    private void reverseLinkList() {        // reverse linkList
+    private void reverseListList() {       // reverse listList
         Node curr = root;
         Node prev = null;
         Node next = null;
@@ -30,11 +21,19 @@ public class ReverseLinkList {
         while(curr!=null) {
             next = curr.next;
             curr.next = prev;
-            curr.prev = next;
             prev = curr;
             curr = next;
         }
         root = prev;
+    }
+
+    private void printListList() {      // print listList
+        Node tmp = root;
+        while(tmp!=null) {
+            System.out.print(tmp.data + " ");
+            tmp = tmp.next;
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -43,8 +42,8 @@ public class ReverseLinkList {
         ob.addNode(20);
         ob.addNode(30);
 
-        ob.printLinkList();
-        ob.reverseLinkList();
-        ob.printLinkList();
+        ob.printListList();
+        ob.reverseListList();
+        ob.printListList();
     }
 }

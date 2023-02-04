@@ -1,4 +1,4 @@
-package DataStructure.LUR_Cache;
+package LUR_Cache;
 
 import java.util.Deque;
 import java.util.HashSet;
