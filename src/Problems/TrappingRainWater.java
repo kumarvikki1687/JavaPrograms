@@ -5,7 +5,7 @@ class TrappingRainWater {
     int getMaxWaterTrapped(int arr[]) {
 
         int len = arr.length;
-        int rslt = 0;
+        int result = 0;
 
         int leftMaxArray[] = new int[len];
         int rightMaxArray[] = new int[len];
@@ -22,9 +22,9 @@ class TrappingRainWater {
         }
 
         for(int i=0;i<len;i++) {
-            rslt+=Math.abs(arr[i]-Math.min(leftMaxArray[i],rightMaxArray[i]));
+            result+=Math.abs(arr[i]-Math.min(leftMaxArray[i],rightMaxArray[i]));
         }
-        return rslt;
+        return result;
     }
     public static void main(String[] args) {
         TrappingRainWater ob = new TrappingRainWater();
