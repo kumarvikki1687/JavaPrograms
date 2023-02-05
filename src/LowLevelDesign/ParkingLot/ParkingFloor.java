@@ -1,4 +1,4 @@
-package LowLevelDesign.parkingLot;
+package LowLevelDesign.ParkingLot;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package LowLevelDesign.parkingLot;
+package LowLevelDesign.ParkingLot;
 
 public class ParkingSpace {
     int spaceId;
