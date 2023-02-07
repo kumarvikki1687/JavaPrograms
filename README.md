@@ -21,3 +21,4 @@ Daemon Thread: Daemon thread in Java is a low-priority thread that runs in the b
 Garbage Collector: 
 It is a background process that runs and looks at heap memory, identifying which objects are in use and which are not, and deleting the unused objects to free the heap memory and to avoid outOfMemoryError.
 The garbage collector is the best example of the Daemon thread as it is always running in the background.
+We can call Garbage Collector manually by System.gc()
