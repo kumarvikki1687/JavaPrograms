@@ -31,7 +31,8 @@ public class Board {
             arr[row-1][col-1] = player.playerSymbol;
             count++;
             displayBoard();
-            if(count>=boardSize+2 && checkForWinningCase(player)) {
+            if(count>=boardSize+2 && checkForWinningCase(player)) {     // no need to check
+                // before 5 steps
                 System.out.println(player.name + " won the game");
             } else {
                 players.add(player);
