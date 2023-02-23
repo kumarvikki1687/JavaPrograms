@@ -11,7 +11,7 @@ public class MaxNonAdjacentSum {
             int old_inc = inc;
             inc = exc + arr[i];
             exc = Math.max(exc, old_inc);
-            maxi = Math.max(inc, exc);
+            maxi = Math.max(maxi, inc);
         }
         return maxi;
     }
