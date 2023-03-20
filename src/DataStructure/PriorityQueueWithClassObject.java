@@ -68,6 +68,5 @@ public class PriorityQueueWithClassObject {
         // System.out.println("Removed object: " + ob.empInfo.remove(3));
         ob.removeElementFromPQ();
         System.out.println("Size is: " + ob.empInfo.size());
-
     }
 }
